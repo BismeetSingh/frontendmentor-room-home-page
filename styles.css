@@ -151,4 +151,25 @@ picture, img {
 .menu-icon-mobile {
   background-color: transparent;
   border: 0px;
+}
+
+.about-section {
+  margin: 3rem;
+}
+
+.about-section h3 {
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.about-section p {
+  font-size: 2rem;
+  color: hsl(0deg, 0%, 63%);
+  line-height: 3rem;
+}
+
+.about-hero img {
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */

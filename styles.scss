@@ -25,9 +25,9 @@ picture,img {
     display: flex;
     align-items: center;
     position: relative;
-    top: -40rem;
     column-gap: 15rem;
     justify-content: start;
+    margin-top: -90%;
     
 
 }
@@ -101,11 +101,10 @@ picture,img {
 
 .slider-buttons {
     position: relative;
-    top:-14.7rem;
-    left: 31rem;
     display: flex;
     align-items: center;
     width: fit-content;
+    margin-top: 59%;
 }
 
 

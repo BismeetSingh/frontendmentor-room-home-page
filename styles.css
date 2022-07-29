@@ -21,10 +21,10 @@ picture, img {
   display: flex;
   align-items: center;
   position: relative;
-  top: -40rem;
   -moz-column-gap: 15rem;
        column-gap: 15rem;
   justify-content: start;
+  margin-top: -90%;
 }
 
 .name-header h1 {
@@ -83,13 +83,12 @@ picture, img {
 
 .slider-buttons {
   position: relative;
-  top: -14.7rem;
-  left: 31rem;
   display: flex;
   align-items: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  margin-top: 59%;
 }
 
 .slider-buttons img {

@@ -103,8 +103,9 @@ picture,img {
     position: relative;
     display: flex;
     align-items: center;
-    width: fit-content;
+    width: 100%;
     margin-top: 59%;
+    justify-content: end;
 }
 
 

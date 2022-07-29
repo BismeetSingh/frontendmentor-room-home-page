@@ -21,10 +21,12 @@ picture, img {
   display: flex;
   align-items: center;
   position: relative;
-  -moz-column-gap: 15rem;
-       column-gap: 15rem;
   justify-content: start;
-  margin-top: -90%;
+  align-self: start;
+  grid-row: 1;
+  grid-column: 1/2;
+  -moz-column-gap: 80%;
+       column-gap: 80%;
 }
 
 .name-header h1 {
@@ -69,11 +71,21 @@ picture, img {
 
 .hero {
   width: 100%;
-  position: relative;
 }
 
 .hero img, .hero picture {
   width: 100%;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.hero-container > picture, .hero-container > picture > img {
+  grid-row: 1;
+  grid-column: 1/4;
 }
 
 .name-header img {
@@ -85,9 +97,10 @@ picture, img {
   position: relative;
   display: flex;
   align-items: center;
-  width: 100%;
-  margin-top: 59%;
-  justify-content: end;
+  justify-self: end;
+  align-self: end;
+  grid-column: 2/4;
+  grid-row: 1;
 }
 
 .slider-buttons img {

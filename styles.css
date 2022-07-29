@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+picture, img {
+  display: block;
+}
+
+.navbar .menu-icon-mobile {
+  margin: 2rem;
+}
+
+.name-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -40rem;
+  -moz-column-gap: 15rem;
+       column-gap: 15rem;
+  justify-content: start;
+}
+
+.name-header h1 {
+  font-size: 2.5rem;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.navbar, .navbar ul {
+  align-items: center;
+}
+
+.header {
+  z-index: 1;
+  color: hsl(0deg, 0%, 0%);
+  position: fixed;
+  top: 0;
+  background-color: hsl(0deg, 0%, 100%);
+  width: 100%;
+  font-size: 2rem;
+  display: block;
+  transform: translateX(-100%);
+  transition: transform 2s;
+}
+
+.navbar {
+  min-height: 8rem;
+  display: flex;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: inherit;
+}
+
+.navbar ul li {
+  text-transform: lowercase;
+  font-size: 2rem;
+}
+
+.hero {
+  width: 100%;
+  position: relative;
+}
+
+.hero img, .hero picture {
+  width: 100%;
+}
+
+.name-header img {
+  width: auto;
+  margin-left: 1rem;
+}
+
+.slider-buttons {
+  position: relative;
+  top: -14.7rem;
+  left: 31rem;
+  display: flex;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.slider-buttons img {
+  color: hsl(0deg, 0%, 27%);
+  background-color: hsl(0deg, 0%, 0%);
+  width: 2rem;
+  aspect-ratio: 0.5;
+  vertical-align: middle;
+}
+
+.slider-button {
+  padding: 2rem;
+  background-color: hsl(0deg, 0%, 0%);
+}
+
+.content h1 {
+  font-size: 3rem;
+}
+
+.content p {
+  font-size: 1.6rem;
+  color: hsl(0deg, 0%, 63%);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 3rem 3rem 3rem;
+  letter-spacing: 0.2rem;
+}
+
+.shopping {
+  margin: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.shopping button {
+  border: 0px;
+  background-color: transparent;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.menu-icon-mobile {
+  background-color: transparent;
+  border: 0px;
+}/*# sourceMappingURL=styles.css.map */

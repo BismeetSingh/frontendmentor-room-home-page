@@ -1,0 +1,175 @@
+@use  'variables';
+
+* {
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+body {
+    font-family: variables.$font;
+    margin: 0;
+    padding: 0;
+}
+
+picture,img {
+    display: block;
+}
+
+.navbar .menu-icon-mobile{
+    margin: 2rem;
+}
+// Navbar
+
+
+.name-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -40rem;
+    column-gap: 15rem;
+    justify-content: start;
+    
+
+}
+
+.name-header h1 {
+    font-size: 2.5rem;
+    color: variables.$white;
+
+}
+
+
+
+.navbar ,.navbar ul  {
+
+    align-items: center;
+   
+}
+
+.header {
+    z-index: 1;
+    color: variables.$black;
+    position: fixed;
+    top: 0;
+    background-color: variables.$white ;
+    width: 100%;
+    font-size: 2rem;
+    display: block;
+    transform: translateX(-100%);
+    transition: transform 2s;
+
+
+}
+
+.navbar {
+    min-height: 8rem;
+    display: flex;
+}
+
+
+.navbar ul {
+    list-style: none;
+    display: flex; 
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: inherit;
+}
+
+.navbar ul li {
+    text-transform: lowercase;
+    font-size: 2rem;
+
+}
+
+// Hero section
+
+.hero {
+
+    width: 100%;
+    position: relative;
+    
+}
+
+.hero img,.hero picture{
+    width: 100%;
+}
+
+.name-header img {
+    width: auto;
+    margin-left: 1rem;
+}
+
+.slider-buttons {
+    position: relative;
+    top:-14.7rem;
+    left: 31rem;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+
+.slider-buttons img {
+    color: variables.$veryDarkGray;
+    background-color: variables.$black;
+    width: 2rem;
+    aspect-ratio: 0.5;
+    vertical-align: middle;
+}
+
+.slider-button {
+    padding: 2rem;
+    background-color: variables.$black;
+}
+
+// Content
+
+.content h1 {
+    font-size: 3rem;
+    
+}
+
+.content p {
+    font-size: 1.6rem;
+    color: variables.$darkGray;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 3rem 3rem 3rem;
+    letter-spacing: 0.2rem;
+}
+
+
+.shopping {
+    margin: 3rem;
+    display: flex;
+    align-items: center;
+
+}
+// Shopping
+
+.shopping button {
+    border: 0px;
+    background-color: transparent;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+// Menu icon
+
+.menu-icon-mobile {
+
+    background-color: transparent;
+    border: 0px;
+
+}
+
+// .menu-icon-mobile:nth-of-type(1):hover {
+//     transform: rotate(180deg);
+//     transition:  transform 2s;
+// }

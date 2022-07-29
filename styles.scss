@@ -130,8 +130,9 @@ picture,img {
 }
 
 .content p {
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: variables.$darkGray;
+    line-height: 3rem;
 
 }
 
@@ -157,6 +158,7 @@ picture,img {
     letter-spacing: 1rem;
     text-transform: uppercase;
     font-weight: 700;
+    font-size: 1.5rem;
 }
 
 

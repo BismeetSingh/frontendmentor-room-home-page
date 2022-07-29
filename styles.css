@@ -108,8 +108,9 @@ picture, img {
 }
 
 .content p {
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: hsl(0deg, 0%, 63%);
+  line-height: 3rem;
 }
 
 .content {
@@ -131,6 +132,7 @@ picture, img {
   letter-spacing: 1rem;
   text-transform: uppercase;
   font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .menu-icon-mobile {

@@ -186,4 +186,49 @@ picture, img {
   .slider-buttons :hover img {
     background-color: hsl(0deg, 0%, 63%);
   }
+}
+@media screen and (min-width: 600px) {
+  .container, .about-section {
+    display: flex;
+  }
+  .menu-icon-mobile {
+    display: none;
+  }
+  .header {
+    transform: translateX(0%);
+  }
+  .about-section {
+    margin: 0rem;
+  }
+  .about-hero img {
+    height: 100%;
+  }
+  .about-content {
+    margin: 0rem 3rem 0rem 3rem;
+    flex: 1;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .header {
+    grid-row: 1;
+    grid-column: 1/2;
+    background-color: transparent;
+    position: static;
+  }
+  .hero {
+    grid-row: 1;
+    grid-column: 1/4;
+  }
+  .slider-buttons {
+    grid-column: 4;
+  }
+  .content {
+    grid-row: 1;
+  }
+  .navbar ul {
+    color: hsl(0deg, 0%, 100%);
+  }
 }/*# sourceMappingURL=styles.css.map */

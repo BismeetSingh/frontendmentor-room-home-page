@@ -100,11 +100,7 @@ picture,img {
     display: grid;
     grid-template-columns:  repeat(3,1fr);
     grid-template-rows: 1fr;
-    // grid-template-areas: "header header" 
-    //                     "image image"
-    //                     "image image"
-    //                     "image image"
-    //                     "slider slider";
+   
 
 }
 
@@ -130,6 +126,14 @@ picture,img {
     align-self: end;
     grid-column: 2/4;
     grid-row: 1;
+
+    :hover{
+        background-color: variables.$darkGray;
+    }
+    :hover img {
+        background-color: variables.$darkGray;
+        
+    }
 }
 
 
@@ -219,4 +223,10 @@ picture,img {
 
 .about-hero img {
     width: 100%;
+}
+
+
+// Had inactive content
+.inactive {
+    display: none;
 }

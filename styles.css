@@ -102,6 +102,12 @@ picture, img {
   grid-column: 2/4;
   grid-row: 1;
 }
+.slider-buttons :hover {
+  background-color: hsl(0deg, 0%, 63%);
+}
+.slider-buttons :hover img {
+  background-color: hsl(0deg, 0%, 63%);
+}
 
 .slider-buttons img {
   color: hsl(0deg, 0%, 27%);
@@ -173,4 +179,8 @@ picture, img {
 
 .about-hero img {
   width: 100%;
+}
+
+.inactive {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */

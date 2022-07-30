@@ -127,13 +127,7 @@ picture,img {
     grid-column: 2/4;
     grid-row: 1;
 
-    :hover{
-        background-color: variables.$darkGray;
-    }
-    :hover img {
-        background-color: variables.$darkGray;
-        
-    }
+   
 }
 
 
@@ -229,4 +223,26 @@ picture,img {
 // Hide inactive content
 .inactive {
     display: none;
+}
+
+
+// Hover query
+@media (hover: hover) and (pointer: fine) {
+    .slider-buttons {
+        :hover{
+            background-color: variables.$darkGray;
+        }
+        :hover img {
+            background-color: variables.$darkGray;
+            
+        }
+    }
+    
+  }
+
+// Desktop 
+@media screen and (min-width:600px) {
+
+
+    
 }

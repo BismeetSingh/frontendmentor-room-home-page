@@ -1,291 +1,310 @@
-@use  'variables';
+@use "variables";
 
 * {
-    box-sizing: border-box;
-    font-size: 10px;
+  box-sizing: border-box;
+  font-size: 10px;
 }
 
 body {
-    font-family: variables.$font;
-    margin: 0;
-    padding: 0;
+  font-family: variables.$font;
+  margin: 0;
+  padding: 0;
 }
 
-picture,img {
-    display: block;
+picture,
+img {
+  display: block;
 }
 
-.navbar .menu-icon-mobile{
-    margin: 2rem;
+.navbar .menu-icon-mobile {
+  margin: 2rem;
 }
 // Navbar
 
+.header .name-header {
+  display: none;
+}
+.hero .name-header{
+  display: flex;
+}
 
 .name-header {
-    display: flex;
-    align-items: center;
-    position: relative;
-    justify-content: start;
-    // grid-area: header;
-    align-self: start;
-    grid-row: 1;
-    grid-column: 1/2;
-    column-gap: 80%;
-    
-
+  align-items: center;
+  position: relative;
+  justify-content: start;
+  // grid-area: header;
+  align-self: start;
+  grid-row: 1;
+  grid-column: 1/2;
+  column-gap: 80%;
 }
 
 .name-header h1 {
-    font-size: 2.5rem;
-    color: variables.$white;
-
+  font-size: 2.5rem;
+  color: variables.$white;
 }
 
-
-
-.navbar ,.navbar ul  {
-
-    align-items: center;
-   
+.navbar,
+.navbar ul {
+  align-items: center;
 }
 
 .header {
-    z-index: 1;
-    color: variables.$black;
-    position: fixed;
-    top: 0;
-    background-color: variables.$white ;
-    width: 100%;
-    font-size: 2rem;
-    display: block;
-    transform: translateX(-100%);
-    transition: transform 2s;
-
-
+  z-index: 1;
+  color: variables.$black;
+  position: fixed;
+  top: 0;
+  background-color: variables.$white;
+  width: 100%;
+  font-size: 2rem;
+  display: block;
+  transform: translateX(-100%);
+  transition: transform 2s;
 }
 
 .navbar {
-    min-height: 8rem;
-    display: flex;
+  min-height: 8rem;
+  display: flex;
 }
-
 
 .navbar ul {
-    list-style: none;
-    display: flex; 
-    justify-content: space-evenly;
-    width: 100%;
-    font-size: inherit;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: inherit;
 }
 
-.navbar ul li {
-    text-transform: lowercase;
-    font-size: 2rem;
+.navbar ul li a {
+  text-transform: lowercase;
+  font-size: 2rem;
+  text-decoration: none;
+  color: variables.$black;
+  cursor: pointer;
+}
 
+.navbar ul li:hover {
+  text-decoration: underline;
 }
 
 // Hero section
 
 .hero {
-
-    width: 100%;
-    
+  width: 100%;
 }
 
-.hero img,.hero picture{
-    width: 100%;
+.hero img,
+.hero picture {
+  width: 100%;
 }
 
 .hero-container {
-    display: grid;
-    grid-template-columns:  repeat(3,1fr);
-    grid-template-rows: 1fr;
-   
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
 }
 
-
-.hero-container > picture ,.hero-container > picture > img{
-    grid-row: 1;
-    grid-column: 1/4;
+.hero-container > picture,
+.hero-container > picture > img {
+  grid-row: 1;
+  grid-column: 1/4;
 }
-
-
 
 .name-header img {
-    width: auto;
-    margin-left: 1rem;
+  width: auto;
+  margin-left: 1rem;
 }
 
 .slider-buttons {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-self: end;
-    // grid-area: slider;
-    align-self: end;
-    grid-column: 2/4;
-    grid-row: 1;
-
-   
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  align-self: end;
+  grid-column: 2/4;
+  grid-row: 1;
 }
 
-
 .slider-buttons img {
-    color: variables.$veryDarkGray;
-    background-color: variables.$black;
-    width: 2rem;
-    aspect-ratio: 0.5;
-    vertical-align: middle;
+  color: variables.$veryDarkGray;
+  background-color: variables.$black;
+  width: 1rem;
+  vertical-align: middle;
 }
 
 .slider-button {
-    padding: 2rem;
-    background-color: variables.$black;
+  padding: 2rem;
+  background-color: variables.$black;
+  cursor: pointer;
 }
 
 // Content
 
 .content h1 {
-    font-size: 3rem;
-    
+  font-size: 3rem;
 }
 
 .content p {
-    font-size: 2rem;
-    color: variables.$darkGray;
-    line-height: 3rem;
-
+  font-size: 2rem;
+  color: variables.$darkGray;
+  line-height: 3rem;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    margin: 0 3rem 3rem 3rem;
-    letter-spacing: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 3rem 3rem 3rem;
+  letter-spacing: 0.2rem;
 }
 
-
 .shopping {
-    margin: 3rem;
-    display: flex;
-    align-items: center;
-
+  margin: 3rem;
+  display: flex;
+  align-items: center;
+  :hover {
+    color: variables.$darkGray;
+  }
 }
 // Shopping
 
 .shopping button {
-    border: 0px;
-    background-color: transparent;
-    letter-spacing: 1rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1.5rem;
+  border: 0px;
+  background-color: transparent;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
-
 
 // Menu icon
 
 .menu-icon-mobile {
-
-    background-color: transparent;
-    border: 0px;
-
+  background-color: transparent;
+  border: 0px;
 }
 
 // About
 
 .about-section {
-    margin: 3rem;
-
+  margin: 3rem;
 }
 
 .about-section h3 {
-    letter-spacing: 0.5rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin-top: 4rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 4rem;
 }
 
 .about-section p {
-    font-size: 2rem;
-    color: variables.$darkGray;
-    line-height: 3rem;
-
+  font-size: 2rem;
+  color: variables.$darkGray;
+  line-height: 3rem;
 }
 
 .about-hero img {
-    width: 100%;
+  width: 100%;
 }
-
 
 // Hide inactive content (Slider)
 .inactive {
-    display: none;
+  display: none;
 }
-
 
 // Hover query
 @media (hover: hover) and (pointer: fine) {
-    .slider-buttons {
-        :hover{
-            background-color: variables.$darkGray;
-        }
-        :hover img {
-            background-color: variables.$darkGray;
-            
-        }
+  .slider-buttons {
+    :hover {
+      background-color: variables.$darkGray;
     }
+    :hover img {
+      background-color: variables.$darkGray;
+    }
+  }
+}
+
+// Desktop
+@media screen and (min-width: 600px) {
+  .about-section {
+    display: flex;
+  }
+  .menu-icon-mobile {
+    display: none;
+  }
+  .header {
+    transform: translateX(0%);
+  }
+  .about-section {
+    margin: 0rem;
+  }
+  .about-hero img {
+    height: 100%;
+  }
+  .about-content {
+    margin: 0rem 3rem 0rem 3rem;
+    flex: 1;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 4fr 1fr;
+  }
+  .header {
+    grid-row: 1/4;
+    grid-column: 1/3;
+    background-color: transparent;
+    position: static;
+  }
+  .hero {
+    grid-row: 1/4;
+    grid-column: 1/3;
+  }
+  .slider-buttons {
+    grid-column: 4/4;
+    grid-row: 1;
+    place-self: start;
+    align-self: end;
     
   }
+  main {
+    grid-row: 1/4;
+    grid-column: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .navbar ul {
+    color: variables.$white;
+  }
+  .slider-button {
+    padding: 3rem;
+  }
+  .about-section {
+    grid-row: 5;
+    grid-column: 1/5;
+  }
 
-// Desktop 
-@media screen and (min-width:600px) {
+  .about-hero,
+  .about-content {
+    flex: 1;
+  }
 
-    .container,.about-section {
-        display: flex;
-    }
-    .menu-icon-mobile {
-        display: none;
-    }
-    .header {
-        transform: translateX(0%);
-    }
-    .about-section{
-        margin:0rem;
-    }
-    .about-hero img {
-        height: 100%;
-        
-    }
-    .about-content {
-        margin:0rem 3rem 0rem 3rem;
-        flex:1;
-    }
-    .container {
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        grid-template-rows: 1fr;
-    }
-    .header {
-        grid-row: 1;
-        grid-column: 1/2;
-        background-color: transparent;
-        position: static;
-    }
-    .hero {
-        grid-row: 1;
-        grid-column: 1/4;
-    }
-    .slider-buttons {
-        grid-column: 4;
-    }
-    .content {
-        grid-row: 1;
-    }
-    .navbar ul {
-        color: variables.$white;
-    }
-    
+  .about-content {
+    grid-row: 2;
+    grid-column: 2/3;
+  }
+  .navbar ul {
+    width: 60%;
+  }
+  .navbar ul li a {
+    color: variables.$white;
+  }
+  .header .name-header {
+    display: block;
+  }
+  .hero .name-header {
+    display: none;
+  }
 }

@@ -272,7 +272,7 @@ img {
     grid-column: 1/5;
   }
   .about-hero {
-    flex-grow: 1;
+    flex: 1;
   }
   .navbar ul {
     width: 60%;

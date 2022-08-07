@@ -1,39 +1,71 @@
-var sliderIndex = 0;
 
-const toggleMenuMobile = () => {
-    const header  = document.getElementsByClassName('header')[0];
-    if (header.style.transform ===  'translateX(-1000px)'){
-        header.style.transform = 'translateX(0%)';  
-    }
-    else{
-        header.style.transform = 'translateX(-1000px)';       
+const displayWindowSize = () => {
     
+    const header = document.getElementsByClassName('header')[0];
+    const w = screen.width;
+    if (w >= 800) {
+        header.style.transform = 'translateX(0%)';
     }
-  
 }
 
-const changeSlideContent = (direction) => {
-    // Get parents
-    const heroContainer = document.getElementsByClassName('hero-container')[0];
-    const contentContainerSection = document.getElementsByClassName('content');
-    const pictElements = heroContainer.getElementsByTagName('picture');
-    for (let index = 0; index < pictElements.length; index++) {
-        const picture = pictElements[index];
-        picture.classList.add('inactive');
-        const content = contentContainerSection[index];
-        content.classList.add('inactive');
+const throttleDisplayWindowSize = (func) => {
+
+    let shouldWait = false;
+    // debugger;
+    return () => {
+
+        if (shouldWait) return;
+        func();
+        shouldWait = true;
+        setTimeout(() => {
+            shouldWait = false;
+
+        }, 1000);
+
     }
-    
-    if (direction == 'up'){
-        sliderIndex = (sliderIndex + 1)%3;
-    }
-    else{
-        if (sliderIndex >= 1){
-            sliderIndex = (sliderIndex - 1)%3;
+
+}
+
+
+
+const toggleMenu = ()=>{
+    let firstLoad = true;
+    return  ()=>{
+        if (firstLoad){
+            const header = document.getElementsByClassName('header')[0];
+            if (header.style.transform === 'translateX(-1000px)') {
+                header.style.transform = 'translateX(0%)';
+            }
+            firstLoad =  false;
         }
+        else{
+            const header = document.getElementsByClassName('header')[0];
+            if (header.style.transform === 'translateX(-1000px)') {
+                header.style.transform = 'translateX(0%)';
+            }
+            else {
+                header.style.transform = 'translateX(-1000px)';
+        
+            }
+        }
+       
+        
     }
-   
-    pictElements[sliderIndex].classList.remove('inactive');
-    contentContainerSection[sliderIndex].classList.remove('inactive');
-
 }
+
+const toggleMenuMobile = toggleMenu();
+
+window.addEventListener('load', () => {
+    toggleMenuMobile();
+});
+
+const windowDisplayToggle = throttleDisplayWindowSize(displayWindowSize);
+
+window.addEventListener('resize', () => {
+    windowDisplayToggle();
+})
+
+
+
+
+

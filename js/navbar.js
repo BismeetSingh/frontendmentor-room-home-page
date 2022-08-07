@@ -29,8 +29,10 @@ const throttleDisplayWindowSize = (func) => {
 
 
 const toggleMenu = ()=>{
+    
     let firstLoad = true;
     return  ()=>{
+        console.log("Clicked");
         if (firstLoad){
             const header = document.getElementsByClassName('header')[0];
             if (header.style.transform === 'translateX(-1000px)') {

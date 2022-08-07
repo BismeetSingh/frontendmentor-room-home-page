@@ -136,7 +136,7 @@ img {
   cursor: pointer;
 }
 
-.content h1 {
+.content-heading {
   font-size: 3rem;
 }
 
@@ -165,10 +165,13 @@ img {
 .shopping button {
   border: 0px;
   background-color: transparent;
-  letter-spacing: 1rem;
+}
+
+.shopping-heading {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1.5rem;
+  letter-spacing: 1rem;
 }
 
 .menu-icon-mobile {
@@ -220,7 +223,7 @@ img {
   .header {
     transform: translateX(0%);
   }
-  .content h1 {
+  .content-heading {
     font-size: 4.5rem;
   }
   .about-section {

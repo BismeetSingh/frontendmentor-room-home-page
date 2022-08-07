@@ -229,6 +229,10 @@ img {
 }
 
 
+.hidden {
+  transform: translateX(-1000px);
+}
+
 
 
 // Desktop
@@ -242,6 +246,7 @@ img {
   .header {
     transform: translateX(0%);
   }
+  
 
   .shopping-heading {
   font-size: 2.5rem;

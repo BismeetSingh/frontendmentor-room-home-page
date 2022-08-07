@@ -1,30 +1,30 @@
 
-const displayWindowSize = () => {
+// const displayWindowSize = () => {
     
-    const header = document.getElementsByClassName('header')[0];
-    const w = screen.width;
-    if (w >= 800) {
-        header.style.transform = 'translateX(0%)';
-    }
-}
+//     const header = document.getElementsByClassName('header')[0];
+//     const w = screen.width;
+//     if (w >= 800) {
+//         header.classList.remove('hidden');
+//     }
+// }
 
-const throttleDisplayWindowSize = (func) => {
+// const throttleDisplayWindowSize = (func) => {
 
-    let shouldWait = false;
-    // debugger;
-    return () => {
+//     let shouldWait = false;
+//     // debugger;
+//     return () => {
 
-        if (shouldWait) return;
-        func();
-        shouldWait = true;
-        setTimeout(() => {
-            shouldWait = false;
+//         if (shouldWait) return;
+//         func();
+//         shouldWait = true;
+//         setTimeout(() => {
+//             shouldWait = false;
 
-        }, 1000);
+//         }, 1000);
 
-    }
+//     }
 
-}
+// }
 
 
 
@@ -35,23 +35,24 @@ const toggleMenu = ()=>{
         console.log("Clicked");
         if (firstLoad){
             const header = document.getElementsByClassName('header')[0];
-            if (header.style.transform === 'translateX(-1000px)') {
-                header.style.transform = 'translateX(0%)';
+            if (header.classList.contains('hidden')){
+                header.classList.remove('hidden');
+
             }
             firstLoad =  false;
         }
         else{
             const header = document.getElementsByClassName('header')[0];
-            if (header.style.transform === 'translateX(-1000px)') {
-                header.style.transform = 'translateX(0%)';
+            if (header.classList.contains('hidden')){
+                header.classList.remove('hidden');
             }
             else {
-                header.style.transform = 'translateX(-1000px)';
+                header.classList.add('hidden');
         
             }
         }
        
-        
+
     }
 }
 
@@ -61,11 +62,11 @@ window.addEventListener('load', () => {
     toggleMenuMobile();
 });
 
-const windowDisplayToggle = throttleDisplayWindowSize(displayWindowSize);
+// const windowDisplayToggle = throttleDisplayWindowSize(displayWindowSize);
 
-window.addEventListener('resize', () => {
-    windowDisplayToggle();
-})
+// window.addEventListener('resize', () => {
+//     windowDisplayToggle();
+// })
 
 
 

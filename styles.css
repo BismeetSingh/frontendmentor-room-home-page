@@ -155,7 +155,7 @@ img {
 .shopping {
   margin: 3rem;
   display: flex;
-  align-items: center;
+  align-self: start;
 }
 .shopping :hover {
   color: hsl(0deg, 0%, 63%);
@@ -168,7 +168,7 @@ img {
 
 .shopping-heading {
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.5rem;
   letter-spacing: 1rem;
 }
@@ -221,6 +221,9 @@ img {
   }
   .header {
     transform: translateX(0%);
+  }
+  .shopping-heading {
+    font-size: 2.5rem;
   }
   .content-heading {
     font-size: 4.5rem;

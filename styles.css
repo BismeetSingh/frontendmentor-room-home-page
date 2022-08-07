@@ -88,8 +88,7 @@ img {
   width: 100%;
 }
 
-.hero-container img,
-.hero-container picture {
+.main-hero-img, .main-hero-picture {
   width: 100%;
 }
 

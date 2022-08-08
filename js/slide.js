@@ -2,7 +2,7 @@ var sliderIndex = 0;
 const changeSlideContent = (direction) => {
     // Get parents
     const heroContainer = document.getElementsByClassName('hero-container')[0];
-    const contentContainerSection = document.getElementsByClassName('content');
+    const contentContainerSection = document.getElementsByClassName('content-container');
     const pictElements = heroContainer.getElementsByTagName('picture');
     for (let index = 0; index < pictElements.length; index++) {
         const picture = pictElements[index];
